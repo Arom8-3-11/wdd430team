@@ -1,12 +1,10 @@
-# Draft GitHub issue backlog
+# GitHub issue backlog
 
-These seven drafts are ready to turn into GitHub Issues and add to the team's
-Project Board. They are not GitHub issues yet; create and assign them in GitHub.
-Use labels such as `must-fix`, `should-fix`, and priority labels if the team
-adopts them.
+These seven issues are tracked on the [StudyConnect Team Board](https://github.com/users/Arom8-3-11/projects/2/views/2).
 
 ## 1. Decide and document persistence, authentication, and file storage
 
+**GitHub issue:** [#1](https://github.com/Arom8-3-11/wdd430team/issues/1)
 **Priority:** P0
 
 **Problem:** The application needs a data store, authentication provider, and
@@ -21,6 +19,7 @@ materials.
 
 ## 2. Add student registration, sign-in, and profile management
 
+**GitHub issue:** [#2](https://github.com/Arom8-3-11/wdd430team/issues/2)
 **Priority:** P0
 
 **Problem:** Students need accounts to own assignments, materials, and group
@@ -35,6 +34,7 @@ memberships.
 
 ## 3. Implement assignment tracking
 
+**GitHub issue:** [#3](https://github.com/Arom8-3-11/wdd430team/issues/3)
 **Priority:** P0
 
 **Problem:** Students currently have no way to organize coursework in the app.
@@ -49,6 +49,7 @@ memberships.
 
 ## 4. Implement material upload and download
 
+**GitHub issue:** [#4](https://github.com/Arom8-3-11/wdd430team/issues/4)
 **Priority:** P0
 
 **Problem:** Students need a way to contribute and retrieve course resources.
@@ -63,6 +64,7 @@ memberships.
 
 ## 5. Build the material browsing and search experience
 
+**GitHub issue:** [#6](https://github.com/Arom8-3-11/wdd430team/issues/6)
 **Priority:** P1
 
 **Problem:** Shared resources are not useful if students cannot discover
@@ -77,6 +79,7 @@ relevant materials.
 
 ## 6. Implement study-group creation and membership
 
+**GitHub issue:** [#5](https://github.com/Arom8-3-11/wdd430team/issues/5)
 **Priority:** P0
 
 **Problem:** Students need a structured way to organize collaboration with
@@ -91,6 +94,7 @@ classmates.
 
 ## 7. Add unified search for study groups
 
+**GitHub issue:** [#7](https://github.com/Arom8-3-11/wdd430team/issues/7)
 **Priority:** P1
 
 **Problem:** Students need to find groups by subject or keyword.
