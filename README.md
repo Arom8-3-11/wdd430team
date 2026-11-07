@@ -43,7 +43,7 @@ The [StudyConnect Team Board](https://github.com/users/Arom8-3-11/projects/2/vie
 
 ## Rendered site
 
-The StudyConnect landing page is being deployed to Vercel. A verified rendered-site URL will be added here when the deployment is available.
+StudyConnect is available as a Vercel preview from the feature branch: [Open the rendered site](https://studyconnect-wdd430-3irppqrs9-arom8-11-3.vercel.app).
 
 ## Project setup status
 
