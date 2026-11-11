@@ -1,5 +1,4 @@
 # StudyConnect
-
 StudyConnect is a web application that helps college and university students organize their academic activities and collaborate by sharing study materials, managing assignments, and connecting through study groups.
 
 ## Team
