@@ -1,20 +1,24 @@
 # GitHub issue backlog
 
-These seven issues are tracked on the [StudyConnect Team Board](https://github.com/users/Arom8-3-11/projects/2/views/2).
+The repository has seven open project issues. Their Project Board URL has not
+been confirmed, and the issues currently have no assignees. After creating the
+board, add all seven issues to it, assign owners, and replace this note with
+the confirmed board link.
 
-## 1. Decide and document persistence, authentication, and file storage
+## 1. Document MongoDB setup and choose authentication and file storage
 
 **GitHub issue:** [#1](https://github.com/Arom8-3-11/wdd430team/issues/1)
 **Priority:** P0
 
-**Problem:** The application needs a data store, authentication provider, and
-file-storage approach before it can persist accounts, assignments, groups, or
-materials.
+**Problem:** The team selected MongoDB, but still needs to document the
+connection approach and choose authentication and file-storage providers
+before implementing persistent accounts and materials.
 
 **Acceptance criteria:**
 
-- Compare viable choices against the course timeline and team experience.
-- Record the selected providers and required environment variables.
+- Document the MongoDB connection approach and required environment variables.
+- Select Auth.js v5 or Clerk for authentication.
+- Select a file-storage provider and supported upload formats.
 - Document local setup without committing secrets.
 
 ## 2. Add student registration, sign-in, and profile management
@@ -87,8 +91,12 @@ classmates.
 
 **Acceptance criteria:**
 
-- A signed-in student can create a group with a name, subject, and description.
+- A signed-in student can create and view a group with a name, subject, and
+  description.
+- The group owner can update or delete their group; other students cannot
+  modify or delete it.
 - Students can browse groups and join an available group.
+- A student can leave a group they joined.
 - Duplicate membership requests are handled safely.
 - Group creation and membership changes have clear success and error states.
 

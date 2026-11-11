@@ -1,5 +1,7 @@
 # StudyConnect Project Specification
 
+> **Canonical Week02 specification:** [StudyConnect MVP specification](specs/001-studyconnect-mvp/spec.md). This document remains the original starting point; the canonical specification takes precedence for the current draft scope and priorities.
+
 ## Project title and description
 
 StudyConnect is a web application for college and university students to
@@ -30,6 +32,15 @@ scope or technical approach before implementation.
 - Students can create study groups and join groups created by classmates.
 - Students can search study materials and groups by subject or keyword.
 
+### Team decisions and open decisions
+
+- **Database:** MongoDB.
+- **Hosting:** Vercel.
+- **Authentication:** Not decided yet. Choose Auth.js v5 or Clerk before
+  implementing account workflows.
+- **File storage:** Not decided yet. Choose a provider and supported upload
+  formats before implementing material uploads and downloads.
+
 ### Out of scope until the team prioritizes them
 
 - Real-time chat, calendar integrations, push notifications, and automated
@@ -46,8 +57,8 @@ scope or technical approach before implementation.
    helpful notes and documents.
 4. As a student, I want to browse and download shared materials so that I can
    use resources relevant to my classes.
-5. As a student, I want to create a study group so that classmates can
-   collaborate around a subject.
+5. As a student, I want to create, view, update, and delete study groups that I
+   own so that I can manage collaboration around a subject.
 6. As a student, I want to find and join a study group so that I can study with
    classmates.
 7. As a student, I want to search materials and groups by subject or keyword so
@@ -92,6 +103,9 @@ scope or technical approach before implementation.
 - A signed-in student can create a group with a name, subject, and description.
 - Missing required group information is rejected with clear validation.
 - The group appears in the available group list after successful creation.
+- The group owner can view and update the group's details.
+- The group owner can delete their group, after which it no longer appears in normal group browsing.
+- A student cannot update or delete a group owned by another student.
 
 ### Story 6: Find and join a study group
 
@@ -99,6 +113,7 @@ scope or technical approach before implementation.
   description.
 - A student can join an available group and receive confirmation.
 - Repeated join requests do not create duplicate memberships.
+- A student can leave a group they joined.
 - No matching groups produce an informative empty state.
 
 ### Story 7: Search
@@ -114,13 +129,22 @@ scope or technical approach before implementation.
 - **Framework:** Next.js App Router.
 - **Language:** TypeScript with strict mode enabled; avoid `any`.
 - **Styling:** Tailwind CSS utility classes; use custom CSS only when needed.
+- **Database:** MongoDB. The team must select and document its MongoDB
+  connection approach and required environment variables before database
+  implementation.
+- **Hosting:** Vercel.
+- **Authentication:** Auth.js v5 or Clerk; provider not yet selected.
+- **File storage:** Provider not yet selected.
 - **Linting and formatting:** ESLint and Prettier with the repository's shared
   configuration.
 - **Rendering:** Prefer Server Components; use Client Components for
   interactions that require browser state or event handling.
-- **Data storage, authentication provider, file-storage provider, supported
-  upload formats, and deployment target:** To be selected by the team before
-  implementing persistent accounts, uploads, or data.
+- **Application structure:** Provide at least three distinct views and at least
+  five reusable components used across multiple pages.
+- **Database request cycle:** Include a Next.js Route Handler that performs a
+  database operation and is consumed by a Client Component. Validate inputs
+  and handle loading, success, and error states.
+- **Responsive design:** Support usable layouts on mobile and desktop.
 - **Validation and privacy:** Validate user input on the server as well as in
   forms. Users may only modify resources they own, and group membership must be
   checked before exposing group-only content.
@@ -140,14 +164,15 @@ the route and data model during implementation.
 | `GET`, `POST`            | `/api/materials`          | Browse or share learning materials                 |
 | `GET`                    | `/api/materials/:id`      | Read material details and obtain its download      |
 | `GET`, `POST`            | `/api/groups`             | Browse or create study groups                      |
-| `GET`                    | `/api/groups/:id`         | Read study group details                           |
+| `GET`, `PATCH`, `DELETE` | `/api/groups/:id`         | Read, update, or delete an owned study group       |
 | `POST`                   | `/api/groups/:id/members` | Join a study group                                 |
+| `DELETE`                 | `/api/groups/:id/members` | Leave a study group                                |
 | `GET`                    | `/api/search?q=:query`    | Search materials and groups by keyword or subject  |
 
 ## Implementation priority
 
-- **P0:** Choose data/auth/storage providers; create accounts and profiles;
-  assignment CRUD; create and join study groups; browse and share materials.
+- **P0:** Choose auth/storage providers; create accounts and profiles;
+  assignment CRUD; study-group CRUD and membership; browse and share materials.
 - **P1:** Search materials and groups; material downloads; input and ownership
   validation; responsive and accessible UI; automated tests for core workflows.
 - **P2:** Group messaging, reminders, calendar integration, and other features
