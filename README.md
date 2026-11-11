@@ -41,10 +41,38 @@ This is the team's public repository: [Arom8-3-11/wdd430team](https://github.com
 
 The [StudyConnect Team Board](https://github.com/users/Arom8-3-11/projects/2/views/2) tracks the project issues.
 
-## Rendered site
+## Deployment
 
-StudyConnect is available as a Vercel preview from the feature branch: [Open the rendered site](https://studyconnect-wdd430-3irppqrs9-arom8-11-3.vercel.app).
+We selected Vercel for hosting. The public site is available
+at [StudyConnect](https://studyconnect-wdd430.vercel.app).
+Use this domain for reviews and submissions; certain preview deployment
+URLs may require Vercel sign-in.
+
+To deploy, import this repository into Vercel, set the project root directory
+to `studyconnect`, and deploy using the existing Next.js build configuration.
+Add any required environment variables after the team selects authentication
+and file-storage providers. Do not commit secrets to the repository.
+
+## API documentation
+
+- `GET /api/hello` returns `{ "message": "Hello, world!" }`. This is the only
+  implemented API route in the initial scaffold.
+- Planned API routes and their purposes are documented in
+  [SPECIFICATION.md](./SPECIFICATION.md). They are not implemented yet.
+
+## Known issues and planned work
+
+- Authentication and file-storage providers still need to be selected.
+- Persistent data workflows and the planned API routes are not implemented.
+- Confirm that the Project Board link is accessible to reviewers.
+- The seven open GitHub issues still need owners and must be added to the
+  Project Board.
 
 ## Project setup status
 
-The repository includes the Next.js App Router project, TypeScript, Tailwind CSS, ESLint, Prettier, and a Node.js `.gitignore`. See [CONTRIBUTING.md](./CONTRIBUTING.md) for the feature-branch and pull-request workflow. GitHub collaborator invitations and `main` branch protection are managed in repository settings.
+The repository includes the Next.js App Router project, TypeScript, Tailwind
+CSS, ESLint, Prettier, and a Node.js `.gitignore`. we selected MongoDB
+and Vercel; authentication and file storage remain open decisions. See
+[CONTRIBUTING.md](./CONTRIBUTING.md) for the feature-branch and pull-request
+workflow. GitHub collaborator invitations and `main` branch protection are
+managed in repository settings.
