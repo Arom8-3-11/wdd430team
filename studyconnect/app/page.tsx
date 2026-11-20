@@ -84,55 +84,6 @@ const studyPlan = [
 export default function Home() {
   return (
     <>
-      <header className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-6 sm:px-10 lg:px-12">
-        <a
-          className="flex items-center gap-3 text-lg font-semibold tracking-tight text-slate-950"
-          href="#home"
-          aria-label="StudyConnect home"
-        >
-          <span className="flex size-10 items-center justify-center rounded-2xl bg-emerald-700 text-white">
-            <svg
-              aria-hidden="true"
-              viewBox="0 0 24 24"
-              fill="none"
-              className="size-5"
-            >
-              <path
-                d="M4 8.25 12 4l8 4.25-8 4.25L4 8.25Z"
-                stroke="currentColor"
-                strokeWidth="1.7"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M7 10v5.25c2.9 2.45 7.1 2.45 10 0V10m3-1.75v6"
-                stroke="currentColor"
-                strokeWidth="1.7"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </span>
-          <span>StudyConnect</span>
-        </a>
-        <nav
-          aria-label="Main navigation"
-          className="hidden items-center gap-9 text-sm font-medium text-slate-600 sm:flex"
-        >
-          <a className="transition hover:text-emerald-800" href="#features">
-            What you can do
-          </a>
-          <a className="transition hover:text-emerald-800" href="#approach">
-            Our approach
-          </a>
-        </nav>
-        <a
-          className="rounded-full bg-slate-950 px-5 py-3 text-sm font-semibold text-white transition hover:bg-emerald-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-700"
-          href="#features"
-        >
-          Explore the project
-        </a>
-      </header>
-
       <main id="home">
         <section className="mx-auto grid w-full max-w-7xl gap-14 px-6 pb-20 pt-10 sm:px-10 sm:pb-28 sm:pt-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16 lg:px-12 lg:pb-32 lg:pt-20">
           <div className="max-w-2xl">
@@ -367,16 +318,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-
-      <footer className="border-t border-slate-900/10 bg-white px-6 py-7 sm:px-10 lg:px-12">
-        <div className="mx-auto flex max-w-7xl flex-col gap-3 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            <span className="font-semibold text-slate-900">StudyConnect</span> —
-            learning is better together.
-          </p>
-          <p>A student project for WDD 430</p>
-        </div>
-      </footer>
     </>
   );
 }

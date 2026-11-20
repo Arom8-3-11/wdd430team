@@ -6,6 +6,7 @@ StudyConnect is a web application that helps college and university students org
 - Audrey Romrell
 - Guinter Chissengue
 - Charles Isama
+- Amando Filho
 
 ## Project files
 
