@@ -1,0 +1,13 @@
+{
+  "name": "wdd430team",
+  "private": true,
+  "scripts": {
+    "install:app": "npm install --prefix studyconnect",
+    "dev": "npm run dev --prefix studyconnect",
+    "build": "npm run build --prefix studyconnect",
+    "start": "npm run start --prefix studyconnect",
+    "lint": "npm run lint --prefix studyconnect",
+    "format": "npm run format --prefix studyconnect",
+    "format:check": "npm run format:check --prefix studyconnect"
+  }
+}

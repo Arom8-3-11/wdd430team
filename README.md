@@ -18,10 +18,11 @@ The Next.js application is in [`studyconnect/`](./studyconnect/).
 
 ## Local development
 
-Run these commands from the `studyconnect` directory:
+Run these commands from the repository root (they forward to the
+`studyconnect` app), or run them directly inside `studyconnect`:
 
 ```bash
-npm install
+npm run install:app
 npm run dev
 ```
 
