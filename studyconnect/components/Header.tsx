@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { Suspense } from "react";
+import AuthNav from "./AuthNav";
 
 export default function Header() {
   return (
@@ -32,6 +34,14 @@ export default function Header() {
             </li>
           </ul>
         </nav>
+
+        <div className="flex items-center gap-3 text-sm font-medium">
+          <Suspense
+            fallback={<span className="text-sm text-emerald-100">…</span>}
+          >
+            <AuthNav />
+          </Suspense>
+        </div>
       </div>
     </header>
   );

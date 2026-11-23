@@ -43,8 +43,12 @@ Final route shapes, data models, typed success/error contracts, and provider-spe
 
 ## Decisions required before implementation
 
-1. Choose and document **Auth.js v5 or Clerk** before implementing accounts; do not assume either.
-2. Choose and document the **file-storage provider and supported upload formats** before implementing material upload or download.
-3. Document the **MongoDB connection approach and required environment variables** before database implementation.
+These decisions are now recorded in
+[docs/TECH_DECISIONS.md](../../docs/TECH_DECISIONS.md):
 
-These decisions are follow-up work for planning or implementation, not a claim that the team has already chosen or ratified them.
+1. **Auth.js v5** (credentials provider, JWT sessions) for authentication.
+2. **Vercel Blob** for file storage, with the supported upload formats listed
+   in the decision record.
+3. **MongoDB Atlas** via the official `mongodb` driver, with required
+   environment variables documented in the decision record and
+   `studyconnect/.env.example`.
