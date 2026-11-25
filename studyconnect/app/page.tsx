@@ -84,12 +84,15 @@ const studyPlan = [
 export default function Home() {
   return (
     <>
-      <main id="home">
+      <div id="home">
         <section className="mx-auto grid w-full max-w-7xl gap-14 px-6 pb-20 pt-10 sm:px-10 sm:pb-28 sm:pt-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16 lg:px-12 lg:pb-32 lg:pt-20">
           <div className="max-w-2xl">
             <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-900/10 bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-800">
-              <span className="size-2 rounded-full bg-emerald-600" />A better
-              way to study together
+              <span
+                aria-hidden="true"
+                className="size-2 rounded-full bg-emerald-600"
+              />
+              A better way to study together
             </p>
             <h1 className="text-5xl font-semibold leading-[1.05] tracking-[-0.055em] text-slate-950 sm:text-6xl lg:text-7xl">
               Make room for
@@ -103,13 +106,13 @@ export default function Home() {
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-4">
               <a
-                className="inline-flex items-center gap-3 rounded-full bg-emerald-800 px-6 py-4 text-sm font-semibold text-white transition hover:bg-emerald-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-700"
+                className="inline-flex min-h-11 items-center gap-3 rounded-full bg-emerald-800 px-6 py-4 text-sm font-semibold text-white transition hover:bg-emerald-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-700"
                 href="#features"
               >
                 See what we&apos;re building
                 <span aria-hidden="true">→</span>
               </a>
-              <span className="text-sm text-slate-500">
+              <span className="text-sm text-slate-600">
                 Made for college learners
               </span>
             </div>
@@ -164,7 +167,7 @@ export default function Home() {
                     className="flex items-center gap-4 rounded-2xl bg-[#f7f8f3] p-4"
                     key={item.title}
                   >
-                    <span className="w-10 shrink-0 text-[10px] font-bold tracking-[0.12em] text-slate-400">
+                    <span className="w-10 shrink-0 text-xs font-bold tracking-[0.12em] text-slate-600">
                       {item.day}
                     </span>
                     <span
@@ -193,21 +196,25 @@ export default function Home() {
                       <span
                         className={`block truncate text-sm font-semibold ${
                           item.done
-                            ? "text-slate-400 line-through"
+                            ? "text-slate-600 line-through"
                             : "text-slate-800"
                         }`}
                       >
                         {item.title}
                       </span>
-                      <span className="mt-1 block text-xs text-slate-500">
+                      <span className="mt-1 block text-xs text-slate-600">
                         {item.course}
                       </span>
                     </span>
                     <span
+                      aria-hidden="true"
                       className={`size-2 rounded-full ${
                         item.done ? "bg-slate-300" : "bg-amber-500"
                       }`}
                     />
+                    <span className="sr-only">
+                      {item.done ? "Completed" : "Pending"}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -229,12 +236,12 @@ export default function Home() {
                   </span>
                 </div>
               </div>
-              <p className="mt-4 text-center text-xs text-slate-400">
+              <p className="mt-4 text-center text-xs text-slate-600">
                 A preview of the StudyConnect experience
               </p>
             </div>
             <div className="absolute -right-2 -top-5 rounded-2xl border border-white/80 bg-white px-4 py-3 shadow-lg sm:-right-5">
-              <p className="text-xs text-slate-500">One space</p>
+              <p className="text-xs text-slate-600">One space</p>
               <p className="mt-1 text-sm font-semibold text-emerald-800">
                 More connected learning
               </p>
@@ -271,7 +278,7 @@ export default function Home() {
                     <span className="flex size-12 items-center justify-center rounded-2xl bg-[#e8efe0] text-emerald-800">
                       {feature.icon}
                     </span>
-                    <span className="text-xs font-semibold tracking-[0.14em] text-slate-400">
+                    <span className="text-xs font-semibold tracking-[0.14em] text-slate-600">
                       {feature.number}
                     </span>
                   </div>
@@ -311,13 +318,13 @@ export default function Home() {
             </p>
             <a
               className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-emerald-900 underline decoration-emerald-900/30 underline-offset-4 transition hover:decoration-emerald-900"
-              href="#home"
+              href="#main-content"
             >
               Back to the top <span aria-hidden="true">↑</span>
             </a>
           </div>
         </section>
-      </main>
+      </div>
     </>
   );
 }
