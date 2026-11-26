@@ -1,12 +1,11 @@
-import PagePlaceholder from "@/components/ui/PagePlaceholder";
+import type { Metadata } from "next";
+import AssignmentsView from "@/components/assignments/AssignmentsView";
+
+export const metadata: Metadata = {
+  title: "My Assignments | StudyConnect",
+  description: "Track coursework, due dates, and status in one place.",
+};
 
 export default function AssignmentsPage() {
-  return (
-    <PagePlaceholder
-      title="My Assignments"
-      intro="Keep track of your coursework, deadlines, and progress."
-      sectionTitle="Assignment Management"
-      message="Your assignments will appear here once assignment management is implemented."
-    />
-  );
+  return <AssignmentsView />;
 }
