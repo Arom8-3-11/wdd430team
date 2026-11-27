@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const features = [
   {
     number: "01",
@@ -112,6 +114,12 @@ export default function Home() {
                 See what we&apos;re building
                 <span aria-hidden="true">→</span>
               </a>
+              <Link
+                className="inline-flex items-center gap-3 rounded-full border border-emerald-900/20 bg-white px-6 py-4 text-sm font-semibold text-emerald-900 transition hover:bg-emerald-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-700"
+                href="/dashboard"
+              >
+                Open your dashboard
+              </Link>
               <span className="text-sm text-slate-600">
                 Made for college learners
               </span>
